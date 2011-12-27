@@ -1,0 +1,8 @@
+# A ready to go Middleman Project
+
+#### Using:
+
+- HAML
+- SASS
+- jQuery (Google's source)
+- Modernizr (CDNJS' source)
