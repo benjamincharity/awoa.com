@@ -1,8 +1,18 @@
 # A ready to go Middleman Project
 
-#### Using:
+### Using:
 
+- HTML5
 - HAML
 - SASS
+ - Compass
+ - Multiple sass files
+- My custom reset (based off of the [Meyer Reset](http://meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded/) and the [HTML5 Boilerplate Reset](http://html5boilerplate.com/docs/The-style/), then tweaked over a few years)
 - jQuery (Google's source)
+ - With local fallback
 - Modernizr (CDNJS' source)
+ - With local fallback
+- Shortened folder names (`/js/`, `/i/`, `/css/`)
+
+
+#### Many more tweaks to come...
