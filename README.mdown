@@ -1,4 +1,4 @@
-# A ready to go Middleman Project
+# A ready to go [Middleman](http://middlemanapp.com/) Project
 
 ### Using:
 
@@ -14,5 +14,6 @@
  - With local fallback
 - Shortened folder names (`/js/`, `/i/`, `/css/`)
 
+- - -
 
-#### Many more tweaks to come...
+Many more tweaks to come...
