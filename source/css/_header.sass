@@ -1,0 +1,40 @@
+body >
+  header
+    position: relative
+    @include transition(0.3s)
+
+    h1, h2, h3
+      font-family: fanwood
+      font-weight: 100
+      text-align: center
+
+    h1
+      padding: 20px 0 6px
+
+      a:link, a:visited
+        -webkit-background-clip: text
+        background-color: rgba(82, 96, 117, 0.5)
+        color: transparent
+        font-family: $franchise
+        font-size: 5em
+        position: relative
+        text-transform: uppercase
+        text-shadow: rgba(250, 250, 250, 0.5) 0 5px 6px, rgba(250, 250, 250, 0.2) 1px 3px 3px
+        -webkit-text-stroke: 0
+        @include transition(background-color)
+
+        &:hover, &:active
+          background-color: rgba(82, 96, 117, 0.8)
+          color: transparent
+
+        &::after
+          // TODO: change to compass gradients
+          background-image: -moz-linear-gradient(top left, hsla(0, 0%, 18%, 0) 0%, hsla(0, 0%, 18%, 0.7) 30%, hsla(0, 0%, 18%, 0.7) 70%, hsla(0, 0%, 18%, 0) 100%)
+          background-image: -webkit-gradient(linear, left top, right top, color-stop(0, hsla(0, 0%, 50%, 0)), color-stop(0.3, hsla(0, 0%, 50%, 1)), color-stop(0.7, hsla(0, 0%, 50%, 1)), color-stop(1, hsla(0, 0%, 50%, 0)))
+          content: ""
+          height: 1px
+          margin-left: -190px
+          position: absolute
+          bottom: -8px
+          left: 50%
+          width: 380px

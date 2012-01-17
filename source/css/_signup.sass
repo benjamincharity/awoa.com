@@ -1,0 +1,51 @@
+.signup
+  h2
+    font-weight: 100
+    margin: 4px 0 8px 10px
+
+  form
+    margin-top: 16px
+    overflow: hidden
+
+    input[type=email]
+      background: none
+      border: none
+      border-bottom: 1px solid $lgray
+      color: $lgray
+      font-style: italic
+      font-family: $fanwood
+      font-size: 1em
+      line-height: 1.1em
+      outline: none
+      width: 100%
+      -webkit-appearance: none
+
+      &:focus
+        color: $dgray
+        outline: none
+
+      &:invalid
+        box-shadow: none
+
+    input[type=submit]
+      background-color: $lgray
+      border: none
+      border-radius: 0
+      clear: both
+      color: $white
+      float: right
+      font-family: $fanwood
+      font-size: 1em
+      font-style: italic
+      font-weight: 100
+      padding-right: 8px
+      text-transform: lowercase
+      @include transition(background-color)
+      -webkit-appearance: none
+
+      &:hover
+        background-color: $gray
+
+    .captcha
+      height: 0
+      visibility: hidden

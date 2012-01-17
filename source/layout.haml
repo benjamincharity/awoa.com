@@ -1,12 +1,14 @@
 !!! 5
-%html{ :lang => "en" }
+%html{:lang => "en"}
   %head
-    %meta{ :charset => "utf-8" }
+    %meta{:charset => "utf-8"}
     %meta{:content => "IE=9; IE=8; IE=EDGE; chrome=1", "http-equiv" => "X-UA-Compatible"}/
-    %meta{:content => "yes", :name => "apple-mobile-web-app-capable"}/
-    %meta{:content => "width=device-width, initial-scale=1, user-scalable=yes", :name => "viewport"}/
+    %meta{:name => "apple-mobile-web-app-capable", :content => "yes"}/
+    %meta{:name => "viewport", :content => "width=device-width, initial-scale=1, user-scalable=yes"}/
+    %meta{:name => "description", :content => ""}/
+    %meta{:name => "keywords", :content => ""}/
 
-    %title Middleman Boilerplate
+    %title Arbor Wood Products
 
     %script(type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js")
     :javascript
@@ -16,10 +18,14 @@
     :javascript
       window.Modernizr || document.write('<script src="js/modernizr-2.0.6.js">\x3C/script>')
 
-    = stylesheet_link_tag "site.css"
+    = stylesheet_link_tag 'site.css', 'flex-slider.css'
 
 
   %body
+    = partial "partials/nav"
+    = partial "partials/header"
     #main
       = yield
+    = partial "partials/footer"
 
+    = javascript_include_tag 'fit-text', 'flex-slider', 'wufoo-signup', 'scripts'

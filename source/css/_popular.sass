@@ -1,0 +1,46 @@
+.popular
+  float: left
+  margin: 0 6% 0 0
+  width: 45%
+
+  h1
+    color: $dgray
+    margin-bottom: 12px
+    position: relative
+
+    // split bottom border allowing space for the dropping 'p'
+    &::before
+      background-color: $dgray
+      content: ""
+      display: block
+      height: 1px
+      position: absolute
+      bottom: 2px
+      left: 0
+      width: 12%
+
+    &::after
+      background-color: $dgray
+      content: ""
+      display: block
+      height: 1px
+      position: absolute
+      bottom: 2px
+      right: 0
+      width: 83%
+
+  li
+    margin-bottom: 6px
+
+  a
+    display: inline-block
+    width: 99%
+
+    img
+      border: 2px solid $white
+      @include box-shadow(0, 0, 6px, $dgray)
+      @include transition(box-shadow)
+
+      &:hover
+        @include box-shadow(0, 0, 10px, $dgray)
+

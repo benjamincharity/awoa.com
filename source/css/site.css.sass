@@ -1,7 +1,153 @@
-@import "reset", "compass", "defaults"
+// setup
+@import "reset", "compass", "defaults", "fonts"
+
+// pages
+@import "index", "primary-page", "kit-page"
+
+// modules
+@import "header", "footer", "signup", "quick-links", "materials", "popular"
+
+
+
+
+
+img
+  width: 100%
+
+html
+  background: $white url("/i/bg-linen.png") center repeat
+  color: $dgray
+  font-family: $fanwood
+  font-size: 10px
+  height: 100%
+  line-height: 1em
+  width: 100%
+
+  a:link, a:visited
+    color: $dgray
+    line-height: 1em
+
+    &:hover, &:active
+      color: $red
+
+body
+  // help smooth out web fonts
+  -webkit-font-smoothing: antialiased
+
+p
+  line-height: 1.1em
+  margin-top: 18px
+
+// fancy horizontal rule
+hr
+  border: none
+  border-top: medium double #333
+  color: #333
+  margin: 40px
+  padding: 0
+  text-align: center
+  // fancy symbol
+  &::after
+    content: "\A7"
+    display: inline-block
+    position: relative
+    top: -0.5em
+    font-size: 1.2em
+    padding: 0 0.25em
 
 
 body
+  nav
+    background: $dgray
+    color: $lgray
+    @include box-shadow(0 0 7px #444)
 
-  #main
+    ul
+      display: block
+      font-size: 1.8em
+      font-family: $franchise
+      padding-bottom: 12px
+      text-align: center
+      text-transform: uppercase
 
+      li
+        display: inline
+        line-height: 1.2em
+
+        a:link, a:visited
+          display: inline-block
+          color: $lgray
+          font-weight: 100
+          line-height: 1em
+          padding: 14px 1% 0
+          position: relative
+          @include transition(color)
+
+          &:hover, &:active
+            color: $light
+
+        &.parent a
+          // arrow below nav item that has children
+          .arrow
+            border-left: 6px solid transparent
+            border-right: 6px solid transparent
+            border-top: 8px solid $lgray
+            content: ""
+            display: block
+            height: 0
+            margin-left: -6px
+            position: absolute
+            bottom: -8px
+            left: 50%
+            @include transition(0.3s)
+            width: 0
+            z-index: 5
+
+
+
+
+
+#main
+  overflow: hidden
+  color: $gray
+  font-family: $fanwood
+  margin-top: 10px
+  overflow: hidden
+  padding: 0 1%
+
+  header
+    margin-bottom: 40px
+    text-align: center
+    h1
+      font-family: $fanwood
+      font-size: 1.6em
+      margin-bottom: 6px
+      text-transform: uppercase
+
+    h2
+      font-style: italic
+
+  h1
+    font-weight: 100
+    line-height: 1em
+
+  aside
+    float: left
+    font-size: 1.2em
+    width: 45%
+
+    & > article
+      border-bottom: 1px solid $lgray
+      margin-bottom: 20px
+      padding-bottom: 20px
+
+    ul
+      font-style: italic
+      line-height: 1.2em
+      margin-left: 12px
+
+
+
+
+// support
+@import "media-queries", "hacks"

@@ -1,0 +1,67 @@
+.materials
+  clear: both
+  float: left
+  margin-top: 46px
+
+  h1
+    font-family: 'fanwoodItalic', times new roman, serif
+    font-style: italic
+    margin-bottom: 8px
+    position: relative
+    text-align: center
+    text-transform: lowercase
+
+    // line to the left and right of the title
+    &::before
+      content: ""
+      position: absolute
+      height: 1px
+      width: 100%
+      top: 60%
+      left: 0
+      margin: 0 0 0 0
+      background-image: -moz-linear-gradient(top left, hsla(0, 0%, 100%, 1) 0%, hsla(0, 0%, 100%, 0.1) 40%, hsla(0, 0%, 100%, 0.1) 60%, hsla(0, 0%, 100%, 1) 100%)
+      background-image: -webkit-gradient(linear, left top, right top, color-stop(0, hsla(0, 0%, 100%, 1)), color-stop(0.4, hsla(0, 0%, 100%, 0.1)), color-stop(0.6, hsla(0, 0%, 100%, 0.1)), color-stop(1, hsla(0, 0%, 100%, 1)))
+      z-index: -1
+
+    &::after
+      content: ""
+      position: absolute
+      height: 1px
+      width: 100%
+      top: 60%
+      left: 0
+      margin: -1px 0 0 0
+      background-image: -moz-linear-gradient(top left, hsla(0, 0%, 18%, 0.7) 0%, hsla(0, 0%, 18%, 0) 30%, hsla(0, 0%, 18%, 0) 70%, hsla(0, 0%, 18%, 0.7) 100%)
+      background-image: -webkit-gradient(linear, left top, right top, color-stop(0, hsla(0, 0%, 18%, 1)), color-stop(0.3, hsla(0, 0%, 18%, 0)), color-stop(0.7, hsla(0, 0%, 18%, 0)), color-stop(1, hsla(0, 0%, 18%, 1)))
+      z-index: -1
+
+  ul
+    counter-reset: item 0
+    overflow: hidden
+    width: 100%
+
+    li
+      counter-increment: item 1
+      float: left
+      font-size: 1.4em
+      line-height: 1em
+      margin: 12px 3%
+      padding-left: 8%
+      position: relative
+      width: 36%
+
+      &::before
+        -webkit-background-clip: text
+        background-color: rgba(82, 96, 117, 0.5)
+        color: transparent
+        content: counter(item)
+        display: block
+        font-family: $franchise
+        font-size: 4em
+        line-height: 1.2em
+        position: absolute
+        left: 0
+        top: 0
+        text-shadow: rgba(250, 250, 250, 0.5) 0 5px 6px, rgba(250, 250, 250, 0.2) 1px 3px 3px
+        -webkit-text-stroke: 0

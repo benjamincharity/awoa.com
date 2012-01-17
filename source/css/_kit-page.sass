@@ -1,0 +1,59 @@
+#main.kit
+  .content
+    float: left
+    font-size: 1.4em
+    margin-right: 3%
+    width: 70%
+
+    p:first-child
+      margin-bottom: 16px
+      margin-top: 0
+
+  #specs
+    font-size: .9em
+    margin-top: 22px
+
+    h1
+      -webkit-background-clip: text
+      background-color: rgba(82, 96, 117, 0.16)
+      color: transparent
+      font-family: $franchise
+      font-size: 4em
+      margin-left: 1%
+      position: relative
+      text-align: center
+      text-transform: uppercase
+      text-shadow: rgba(250, 250, 250, 0.3) 0 5px 6px, rgba(250, 250, 250, 0.1) 1px 3px 3px
+
+    h3
+      font-style: italic
+      margin: 12px 0 4px
+      text-decoration: underline
+      text-transform: lowercase
+
+    article
+      margin: 0 1% 12px
+
+      &:last-child
+        clear: left
+
+        li
+          clear: left
+          line-height: 1.1em
+
+    ul
+      overflow: hidden
+      // so hanging text doesn't get clipped
+      padding-bottom: 2px
+
+      li
+        float: left
+        line-height: 1em
+        margin-right: 7px
+
+        &:last-child
+          margin-right: 0
+
+  aside
+    float: left
+    width: 26%

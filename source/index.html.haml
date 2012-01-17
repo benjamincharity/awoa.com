@@ -1,4 +1,27 @@
 - content_for :head do
-  %title The Middleman!
+  %title Arbor Wood Products
 
-%h1 The Middleman is watching.
+%header
+  %h1 Custom Post Frame Kits
+  %h2 Arbor Wood Products is the only full service post frame kit company in the Atlanta, Georgia area.
+
+%article.intro
+  = partial "partials/slideshow-main"
+
+  %p Arbor Wood Products provides building kits in multiple styles, including pole barns, garages, RV storage buildings, horse barns, equipment storage buildings, hay barns, and even airplane hangers.
+  %p Arbor Wood post frame kits can be designed as a roof only kit or a completely enclosed kit with your choice of door styles. We can produce a kit for a building as small as a 20x20 or as large as a 40x200, with ceiling heights from the standard 10' up to 20' high.
+  %p Arbor Wood Products can provide you with a building kit allowing you to construct your own high quality building with the finest material, or we can install it for you in most locations.
+  %p
+    %em Arbor Wood Products is now pleased to offer financing options on some of our building kits.
+
+
+.right
+  = partial "partials/popular"
+
+  %aside
+    = partial "partials/signup"
+    = partial "partials/service-area"
+    = partial "partials/quick-links"
+
+
+= partial "partials/materials"

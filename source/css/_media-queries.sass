@@ -1,0 +1,70 @@
+@media only screen and (min-width : 680px) and (max-width : 860px)
+
+
+@media all and (max-width: 680px)
+  body > nav li
+    line-height: 1.1em
+    span.arrow
+      display: none
+
+  body > header h1 a:link
+    font-size: 4em
+
+  #main
+    margin: 0 1%
+
+    // move bottom border to top to help separate from #specs
+    aside > article
+      border-bottom: none
+      border-top: 1px solid $lgray
+      margin-top: 20px
+      padding-top: 20px
+
+    & > section, & > article
+      clear: left
+      margin-top: 26px
+      width: 100%!important
+
+    .right
+      margin-left: 0
+      width: 99%
+
+      article.popular
+        margin: 26px 0 0 0
+        width: 100%
+
+      aside
+        width: 100%
+
+    .materials
+      ul
+        li
+          margin: 12px 0
+          padding-left: 7%
+          width: 93%
+
+          &::before
+            line-height: .8em
+
+  ////  KIT PAGE  ////
+  #main.kit
+    .content
+      margin-right: 0
+      width: 100%
+
+    #specs
+      margin-bottom: 24px
+
+    aside
+      width: 100%
+
+  footer
+    font-size: .6em
+
+  #form1 #Field1 input:required:invalid
+    box-shadow: none
+
+
+
+
+

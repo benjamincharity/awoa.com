@@ -1,0 +1,12 @@
+%article.signup
+  %hgroup
+    %h1 Sign Up
+    %h2 For news and special offers
+
+  %form#form1.wufoo.topLabel.page{:action => "https://arborwood.wufoo.com/forms/z7x3k1/#public", :autocomplete => "off", :enctype => "multipart/form-data", :method => "post", :name => "form1", :novalidate => ""}
+    %input#Field1.field.text.medium{:maxlength => "255", :name => "Field1", :required => "", :spellcheck => "false", :tabindex => "1", :type => "email", :placeholder => "you@youremail.com"}/
+    %input#saveForm.btTxt.submit{:name => "saveForm", :type => "submit", :value => "Submit"}/
+    %div.captcha
+      %label{:for => "comment"} Do Not Fill This Out
+      %textarea#comment{:cols => "1", :name => "comment", :rows => "1"}
+      %input#idstamp{:name => "idstamp", :type => "hidden", :value => "t9lx6PnuG3VMrBLDPLgp92c5PA0ZkBd6irP584qWZwo="}/
