@@ -12,7 +12,7 @@
     text-transform: lowercase
 
     // line to the left and right of the title
-    &::before
+    &:before
       content: ""
       position: absolute
       height: 1px
@@ -20,11 +20,12 @@
       top: 60%
       left: 0
       margin: 0 0 0 0
+      // TODO: change to css gradients
       background-image: -moz-linear-gradient(top left, hsla(0, 0%, 100%, 1) 0%, hsla(0, 0%, 100%, 0.1) 40%, hsla(0, 0%, 100%, 0.1) 60%, hsla(0, 0%, 100%, 1) 100%)
       background-image: -webkit-gradient(linear, left top, right top, color-stop(0, hsla(0, 0%, 100%, 1)), color-stop(0.4, hsla(0, 0%, 100%, 0.1)), color-stop(0.6, hsla(0, 0%, 100%, 0.1)), color-stop(1, hsla(0, 0%, 100%, 1)))
       z-index: -1
 
-    &::after
+    &:after
       content: ""
       position: absolute
       height: 1px
@@ -51,7 +52,7 @@
       position: relative
       width: 36%
 
-      &::before
+      &:before
         -webkit-background-clip: text
         background-color: rgba(82, 96, 117, 0.5)
         color: transparent

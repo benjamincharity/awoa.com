@@ -1,0 +1,30 @@
+body
+  > nav
+    background: $dgray
+    @include pie
+    @include box-shadow(0 0 7px #444)
+    color: $lgray
+
+    ul
+      display: block
+      font-size: 1.8em
+      font-family: $franchise
+      padding-bottom: 12px
+      text-align: center
+      text-transform: uppercase
+
+      li
+        display: inline
+        line-height: 1.2em
+
+        a:link, a:visited
+          display: inline-block
+          color: $lgray
+          font-weight: 100
+          line-height: 1em
+          padding: 14px 1% 0
+          position: relative
+          @include transition(color)
+
+          &:hover, &:active
+            color: $light

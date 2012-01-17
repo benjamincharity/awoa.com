@@ -5,14 +5,18 @@
 @import "index", "primary-page", "kit-page"
 
 // modules
-@import "header", "footer", "signup", "quick-links", "materials", "popular"
+@import "header", "nav", "footer", "signup", "quick-links", "materials", "popular"
 
 
 
 
 
 img
-  width: 100%
+  // allows centering margins to work
+  display: block
+  margin: 0 auto
+  // dynamic image width but never distorted
+  max-width: 100%
 
 html
   background: $white url("/i/bg-linen.png") center repeat
@@ -46,8 +50,9 @@ hr
   margin: 40px
   padding: 0
   text-align: center
+
   // fancy symbol
-  &::after
+  &:after
     content: "\A7"
     display: inline-block
     position: relative
@@ -56,57 +61,7 @@ hr
     padding: 0 0.25em
 
 
-body
-  nav
-    background: $dgray
-    color: $lgray
-    @include box-shadow(0 0 7px #444)
-
-    ul
-      display: block
-      font-size: 1.8em
-      font-family: $franchise
-      padding-bottom: 12px
-      text-align: center
-      text-transform: uppercase
-
-      li
-        display: inline
-        line-height: 1.2em
-
-        a:link, a:visited
-          display: inline-block
-          color: $lgray
-          font-weight: 100
-          line-height: 1em
-          padding: 14px 1% 0
-          position: relative
-          @include transition(color)
-
-          &:hover, &:active
-            color: $light
-
-        &.parent a
-          // arrow below nav item that has children
-          .arrow
-            border-left: 6px solid transparent
-            border-right: 6px solid transparent
-            border-top: 8px solid $lgray
-            content: ""
-            display: block
-            height: 0
-            margin-left: -6px
-            position: absolute
-            bottom: -8px
-            left: 50%
-            @include transition(0.3s)
-            width: 0
-            z-index: 5
-
-
-
-
-
+// main content section of site (between header and footer)
 #main
   overflow: hidden
   color: $gray
@@ -115,16 +70,18 @@ body
   overflow: hidden
   padding: 0 1%
 
-  header
+  // smaller title below site name on each page
+  .section-head
     margin-bottom: 40px
     text-align: center
-    h1
+
+    h2
       font-family: $fanwood
       font-size: 1.6em
       margin-bottom: 6px
       text-transform: uppercase
 
-    h2
+    p
       font-style: italic
 
   h1
