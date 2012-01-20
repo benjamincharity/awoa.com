@@ -15,7 +15,7 @@
     :javascript
       window.Modernizr || document.write('<script src="js/modernizr-2.0.6.js">\x3C/script>')
 
-    = stylesheet_link_tag 'site.css', 'flex-slider.css'
+    = stylesheet_link_tag 'site.css', 'flex-slider.css', 'slimbox.css'
 
 
   %body
@@ -24,4 +24,4 @@
     = yield
     = partial "partials/footer"
 
-    = javascript_include_tag 'fit-text', 'flex-slider', 'wufoo-signup', 'scripts'
+    = javascript_include_tag 'fit-text', 'flex-slider', 'wufoo-signup', 'slimbox', 'scripts'
