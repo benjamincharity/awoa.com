@@ -18,7 +18,7 @@
     = stylesheet_link_tag 'site.css', 'flex-slider.css', 'slimbox.css'
 
 
-  %body
+  %body{class: "#{page_classes}"}
     = partial "partials/nav"
     = partial "partials/header"
     = yield

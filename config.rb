@@ -53,6 +53,17 @@ end
 # Helpers
 ###
 
+def page_classes
+  path = request.path_info.dup
+  path << settings.index_file if path.match(%r{/$})
+  path = path.gsub(%r{^/}, '')
+
+  classes = []
+  parts = path.split('.')[0].split('/')
+
+  parts.join(' ')
+end
+
 # Methods defined in the helpers block are available in templates
 # helpers do
 #   def some_helper
