@@ -1,0 +1,17 @@
+ul.gallery
+  display: inline-block
+  margin-top: 20px
+  text-align: center
+
+  li
+    display: inline-block
+    margin: 4px
+
+    a
+      border: 2px solid $white
+      display: block
+
+      &:hover, &:active
+        @include pie
+        @include box-shadow
+        @include transition
