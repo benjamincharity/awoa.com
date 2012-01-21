@@ -7,3 +7,30 @@
   margin-left: 3%
   width: 48%
 
+  .popular
+    margin: 0 6% 0 0
+    width: 45%
+
+    h1
+      color: $dgray
+
+      // split bottom border allowing space for the dropping 'p'
+      &:before
+        background-color: $dgray
+        content: ""
+        display: block
+        height: 1px
+        position: absolute
+        bottom: 2px
+        left: 0
+        width: 12%
+
+      &:after
+        background-color: $dgray
+        content: ""
+        display: block
+        height: 1px
+        position: absolute
+        bottom: 2px
+        right: 0
+        width: 83%
