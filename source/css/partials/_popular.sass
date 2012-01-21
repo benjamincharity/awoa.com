@@ -9,7 +9,7 @@
     position: relative
 
     // split bottom border allowing space for the dropping 'p'
-    &::before
+    &:before
       background-color: $dgray
       content: ""
       display: block
@@ -19,7 +19,7 @@
       left: 0
       width: 12%
 
-    &::after
+    &:after
       background-color: $dgray
       content: ""
       display: block
@@ -33,15 +33,12 @@
     margin-bottom: 6px
 
   a
+    border: 2px solid $white
     display: inline-block
     width: 99%
 
-    img
-      border: 2px solid $white
+    &:hover, &:active
       @include pie
-      @include box-shadow(0, 0, 6px, $dgray)
-      @include transition(box-shadow)
-
-      &:hover
-        @include box-shadow(0, 0, 10px, $dgray)
+      @include box-shadow
+      @include transition
 

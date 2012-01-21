@@ -1,0 +1,103 @@
+#lbOverlay
+  background-color: #000
+  cursor: default
+  height: 100%
+  position: fixed
+  left: 0
+  top: 0
+  width: 100%
+  z-index: 9999
+
+#lbCenter, #lbBottomContainer
+  background-color: #fff
+  cursor: pointer
+  overflow: hidden
+  position: absolute
+  z-index: 9999
+
+.lbLoading
+  background: white url(/i/loading.gif) no-repeat center
+
+#lbImage
+  background-repeat: no-repeat
+  border: 10px solid #fff
+  position: absolute
+  left: 0
+  top: 0
+
+#lbPrevLink, #lbNextLink
+  display: block
+  font-weight: bold
+  line-height: 22px
+  outline: none
+  position: absolute
+  top: 0
+  @include transition
+  width: 50%
+
+#lbPrevLink
+  left: 0
+
+  &:after
+    background-color: #fff
+    @include pie
+    @include border-radius(0 4px 4px 0)
+    content: "Prev"
+    display: block
+    height: 22px
+    opacity: 0
+    padding-left: 12px
+    position: absolute
+    left: 0
+    top: 30px
+    width: 40px
+
+  &:hover
+    &:after
+      opacity: 1
+
+#lbNextLink
+  right: 0
+
+  &:after
+    background-color: #fff
+    @include pie
+    @include border-radius(4px 0 0 4px)
+    content: "Next"
+    display: block
+    height: 22px
+    opacity: 0
+    padding-right: 12px
+    position: absolute
+    right: 0
+    top: 30px
+    text-align: right
+    width: 40px
+
+  &:hover
+    &:after
+      opacity: 1
+
+#lbBottom
+  border: 10px solid #fff
+  border-top-style: none
+  color: #666
+  font-family: Verdana, Arial, Geneva, Helvetica, sans-serif
+  font-size: 10px
+  line-height: 1.4em
+  text-align: left
+
+#lbCloseLink
+  background: transparent url(/i/closelabel.gif) no-repeat center
+  display: block
+  float: right
+  height: 22px
+  margin: 5px 0
+  outline: none
+  width: 66px
+
+#lbCaption, #lbNumber
+  margin-right: 71px
+
+#lbCaption
+  font-weight: bold
