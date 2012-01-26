@@ -1,0 +1,91 @@
+.contact-us
+
+  #main
+
+    hr
+      display: none
+
+    .copy
+      float: left
+      display: inline-block
+      margin-right: 3%
+      overflow: hidden
+      width: 48%
+
+    form
+      display: inline-block
+      float: left
+      width: 48%
+
+      li
+        margin-bottom: 8px
+        position: relative
+
+        &.phone
+          input
+            width: 12%
+          .symbol
+            padding: 0 4px
+
+        &.buttons
+          text-align: right
+
+        &.hide
+          cursor: default
+          opacity: 0
+
+      label
+        position: absolute
+        top: 4px
+
+        &:after
+          content: ":"
+
+        // hide label for phone #
+        &[for=Field4]
+          display: none
+
+      input, textarea
+        background: transparent
+        border: 1px solid transparent
+        // fixes bottom border bug
+        @include border-radius(0)
+        border-bottom: 1px solid $dgray
+        @include single-transition
+        width: 80%
+
+        &:focus
+          border: 1px solid $dgray
+          outline: none
+
+      input
+
+        &:invalid
+          @include box-shadow(none)
+
+        // name
+        &#Field14
+          padding-left: 46px
+        // email
+        &#Field3
+          padding-left: 44px
+        // city / state
+        &#Field12
+          padding-left: 72px
+          width: 75%
+
+        &[type=submit]
+          border-bottom: none
+          margin-right: 12%
+          width: auto
+
+          &:focus
+            border: 1px solid $dgray
+            outline: none
+
+          &:hover
+            color: $gray
+
+      textarea
+        text-indent: 98px
+        width: 92%

@@ -1,7 +1,57 @@
 - content_for :head do
   %title Contact Us
-  %meta{:name => "description", :content => ""}/
-  %meta{:name => "keywords", :content => ""}/
+  %meta{:name => "description", :content => "Contact Arbor Wood Products with our simple to use contact form."}/
+  %meta{:name => "keywords", :content => "contact us, contact Arbor Wood Products, contact Arbor Wood"}/
 
 #main
-  %h1 blah blah contact
+  .section-head
+    %h2 Contact Us
+
+  .copy
+    :markdown
+      We at Arbor Wood Products are always available to answer your questions or to assist you in the purchase and installation of your building kit.
+
+      If you would like to ask a question we have 3 easy ways for you to contact us.
+
+      1. Fill out the simple contact form
+      2. Call us at 678-431-3122
+      3. Email us at <mailto:david@arborwoodofatlanta.com>
+
+    %hr
+
+  %form#form2.wufoo.leftLabel.page{:action => "https://arborwood.wufoo.com/forms/m7x3s5/#public", :autocomplete => "off", :enctype => "multipart/form-data", :method => "post", :name => "form2", :novalidate => ""}
+    %ul
+      %li#foli14.notranslate
+        %label#title14.desc{:for => "Field14"} Name
+        %input#Field14.field.text.medium{:maxlength => "255", :name => "Field14", :onkeyup => "", :tabindex => "1", :type => "text", :value => ""}/
+
+      %li#foli3.notranslate
+        %label#title3.desc{:for => "Field3"} Email
+        %input#Field3.field.text.medium{:maxlength => "255", :name => "Field3", :spellcheck => "false", :tabindex => "2", :type => "email", :value => ""}/
+
+      %li#foli4.phone.notranslate
+        %label#title4.desc{:for => "Field4"} Phone Number
+        %span
+          %input#Field4.field.text{:maxlength => "3", :name => "Field4", :size => "3", :tabindex => "3", :type => "tel", :value => "", :placeholder => "###"}/
+        %span.symbol -
+        %span
+          %input#Field4-1.field.text{:maxlength => "3", :name => "Field4-1", :size => "3", :tabindex => "4", :type => "tel", :value => "", :placeholder => "###"}/
+        %span.symbol -
+        %span
+          %input#Field4-2.field.text{:maxlength => "4", :name => "Field4-2", :size => "4", :tabindex => "5", :type => "tel", :value => "", :placeholder => "####"}/
+
+      %li#foli12.notranslate
+        %label#title12.desc{:for => "Field12"} City, State
+        %input#Field12.field.text.medium{:maxlength => "255", :name => "Field12", :onkeyup => "", :tabindex => "6", :type => "text", :value => ""}/
+
+      %li#foli13.notranslate
+        %label#title13.desc{:for => "Field13"} Project Details
+        %textarea#Field13.field.textarea.medium{:name => "Field13", :onkeyup => "", :rows => "10", :spellcheck => "true", :tabindex => "7"}
+
+      %li.buttons
+        %input#saveForm.btTxt.submit{:name => "saveForm", :type => "submit", :value => "Send", :tabindex => "8"}/
+
+      %li.hide
+        %label{:for => "comment"} [Spam test - leave blank]
+        %textarea#comment{:cols => "50", :name => "comment", :rows => "1"}
+        %input#idstamp{:name => "idstamp", :type => "hidden", :value => "GvGYKAO5AR67Q0azXL2ukz4sTzGjHmXKmULmI+WnWi8="}/

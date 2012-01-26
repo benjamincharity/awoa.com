@@ -2,7 +2,7 @@
 @import "reset", "compass", "defaults", "fonts"
 
 // pages
-@import "index", "primary-page", "kit-page", "pages/completed-projects", "pages/metal-color-options", "pages/available-kits"
+@import "index", "primary-page", "kit-page", "pages/completed-projects", "pages/metal-color-options", "pages/available-kits", "pages/contact-us"
 
 // partials
 @import "partials/header", "partials/nav", "partials/footer", "partials/signup", "partials/quick-links", "partials/materials", "partials/popular", "partials/gallery"
@@ -39,6 +39,13 @@ html
 body
   // help smooth out web fonts
   -webkit-font-smoothing: antialiased
+
+::-webkit-input-placeholder
+  font-family: $fanwood
+
+input:-moz-placeholder
+  font-family: $fanwood
+
 
 p
   line-height: 1.1em
@@ -107,7 +114,10 @@ hr
       line-height: 1.2em
       margin-left: 12px
 
-
+  ol
+    line-height: 1.1em
+    margin-top: 18px
+    padding-left: 32px
 
 
 // support
